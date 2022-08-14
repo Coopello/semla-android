@@ -3,10 +3,12 @@ package com.coopello.semla
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.ui.Modifier
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
+import androidx.compose.material.Scaffold
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.ui.res.stringResource
 import com.coopello.semla.ui.theme.SemlaTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,10 +16,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             SemlaTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {}
+                Scaffold(
+                    floatingActionButton = {
+                        FloatingActionButton(onClick = { /* TODO: Qiita に投稿する処理を実装 */ }) {
+                            Icon(
+                                imageVector = Icons.Outlined.Check,
+                                contentDescription = stringResource(R.string.fab_icon_description)
+                            )
+                        }
+                    }
+                ) {
+                }
             }
         }
     }

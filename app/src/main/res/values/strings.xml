@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Semla</string>
+    <string name="fab_icon_description">投稿する</string>
 </resources>
