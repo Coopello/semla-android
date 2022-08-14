@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="section_card_corner_radius">8dp</dimen>
+    <dimen name="section_card_padding">24dp</dimen>
+    <dimen name="section_card_spacer">8dp</dimen>
+</resources>
