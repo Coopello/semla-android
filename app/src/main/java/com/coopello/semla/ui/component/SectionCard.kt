@@ -56,9 +56,3 @@ fun SectionCard(
         }
     }
 }
-
-@Preview
-@Composable
-private fun SectionCardPreview() {
-    SectionCard(sectionTitle = "あああ")
-}
