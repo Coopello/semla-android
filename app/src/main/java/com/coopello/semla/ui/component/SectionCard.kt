@@ -24,7 +24,8 @@ import com.coopello.semla.ui.theme.SemlaTextFieldColors
 
 @Composable
 fun SectionCard(
-    sectionTitle: String
+    title: String,
+    placeholder: String
 ) {
     var sectionContent by remember {
         mutableStateOf("")
@@ -37,7 +38,7 @@ fun SectionCard(
                 .padding(dimensionResource(R.dimen.section_card_padding))
         ) {
             Text(
-                text = sectionTitle,
+                text = title,
                 style = MaterialTheme.typography.h5.copy(
                     fontWeight = FontWeight.W700
                 ),
@@ -49,6 +50,7 @@ fun SectionCard(
                 onValueChange = { sectionContent = it },
                 modifier = Modifier.fillMaxWidth(),
                 textStyle = MaterialTheme.typography.body1,
+                placeholder = { Text(text = placeholder) },
                 colors = SemlaTextFieldColors()
             )
         }
