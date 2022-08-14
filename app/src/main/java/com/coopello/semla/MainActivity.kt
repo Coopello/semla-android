@@ -61,8 +61,8 @@ class MainActivity : ComponentActivity() {
                             contentType = { it }
                         ) {
                             SectionCard(
-                                title = it,
-                                placeholder = it
+                                title = it.first,
+                                placeholder = it.second
                             )
                             Spacer(modifier = Modifier.height(8.dp))
                         }
@@ -74,5 +74,10 @@ class MainActivity : ComponentActivity() {
 }
 
 private object MockData {
-    val sectionList = listOf("一言まとめ", "深掘りした内容", "自分の考え", "参考文献")
+    val sectionList = listOf<Pair<String, String>>(
+        "一言まとめ" to "記事の内容を一言でまとめましょう！",
+        "深掘りした内容" to "調査・勉強をする中で深ぼった内容をまとめましょう！",
+        "自分の考え" to "調査・勉強を経て、自分なりの意見や考えをまとめましょう！",
+        "参考文献" to "参考文献のリンクや書籍名を列挙しましょう！"
+    )
 }
